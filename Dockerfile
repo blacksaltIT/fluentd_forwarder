@@ -4,7 +4,8 @@ RUN apt-get -y update && apt-get -y install \
         libnss-wrapper \
         ruby-dev \
         gcc \
-        make
+        make \
+        curl
 RUN gem install fluent-plugin-http-heartbeat:0.0.5
 
 ENV FLUENTD_FORWARDER_HOST=localhost
