@@ -1,5 +1,7 @@
 FROM fluent/fluentd:v1.3.3-debian-1.0
 
+USER root
+
 RUN apt-get -y update && apt-get -y install \
         libnss-wrapper \
         ruby-dev \
