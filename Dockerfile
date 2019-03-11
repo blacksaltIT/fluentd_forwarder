@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.1.3-debian
+FROM fluent/fluentd:v1.3.3-debian-1.0
 
 RUN apt-get -y update && apt-get -y install \
         libnss-wrapper \
