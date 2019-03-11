@@ -26,7 +26,7 @@ COPY matches /fluentd/etc/matches
 RUN chmod 777 -vR /fluentd
 
 COPY entrypoint_nss.sh /usr/bin/
-ENTRYPOINT [ "/usr/bin/entrypoint_nss.sh" ]
-CMD [ "/bin/sh", "-c", "exec fluentd -c /fluentd/etc/${FLUENTD_CONF} -p /fluentd/plugins $FLUENTD_OPT" ]
+ENTRYPOINT [ "/usr/bin/entrypoint_nss.sh", "/bin/entrypoint.sh" ]
+CMD ["fluentd"]
 EXPOSE 8080 24224
 USER 123456
