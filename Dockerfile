@@ -8,13 +8,10 @@ RUN apt-get -y update && apt-get -y install \
         gcc \
         make \
         curl
-RUN gem install fluent-plugin-http-heartbeat:0.0.5
 
 ENV FLUENTD_FORWARDER_HOST=localhost
 ENV FLUENTD_FORWARDER_PORT=24224
 ENV FLUENTD_FLUSH_INTERVAL=1s
-ENV HEARTBEAT_HOST=localhost
-ENV HEARTBEAT_PORT=24280
 
 ENV FLUENTD_AGGREG_HOST=setme
 ENV FLUENTD_AGGREG_PORT=setme
